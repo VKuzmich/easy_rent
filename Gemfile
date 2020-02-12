@@ -37,7 +37,7 @@ gem 'bootstrap-sass', '~> 3.4.1'
 gem 'devise'
 gem 'jquery-rails'
 gem 'sassc-rails', '>= 2.1.0'
-
+gem 'toastr-rails'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
