@@ -1,2 +1,18 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.avatar-small {
+  width: 20px;
+}
+
+.avatar-medium {
+  width: 40px;
+}
+
+.avatar-large {
+  width: 60px;
+}
+
+.avatar-full {
+  width: 100%;
+}
