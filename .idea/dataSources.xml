@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="easy_rent_development@localhost" uuid="eccff768-12b9-47d8-9dbc-a3be370af81c">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/easy_rent_development</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="easy_rent_test@localhost" uuid="5cc19c87-ba71-4a40-a62b-04fb35fdfba3">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/easy_rent_test</jdbc-url>
+    </data-source>
+  </component>
+</project>
