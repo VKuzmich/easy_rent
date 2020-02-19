@@ -127,7 +127,7 @@
         </div>
       </div>
     </div>
-
+    <hr>
     <!-- Google map -->
     <div class="row">
       <div class="col-md-12">
@@ -168,7 +168,7 @@
       <% for room in @room.nearbys(10) %>
         <div class="col-md-4">
           <div class="panel panel-default">
-            <div class="panel-heading">
+            <div class="panel-heading preview">
               <%= image_tag room.photos[0].image.url(:medium) %>
             </div>
             <div class="panel-body">
