@@ -42,6 +42,9 @@ gem 'omniauth-facebook'
 gem 'paperclip'
 gem 'sassc-rails', '>= 2.1.0'
 gem 'toastr-rails'
+gem 'jquery-ui-rails'
+gem 'simple_form'
+
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false

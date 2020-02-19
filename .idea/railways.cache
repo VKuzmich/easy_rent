@@ -1,0 +1,56 @@
+do /Users/vladimirkuzmich/easy_rent/bin/bundle exec /Users/vladimirkuzmich/.rvm/rubies/ruby-2.6.3/bin/ruby /Users/vladimirkuzmich/easy_rent/bin/rake routes --trace
+Ruby enVironment Manager 1.29.9 (latest) (c) 2009-2017 Michal Papis, Piotr Kuczynski, Wayne E. Seguin
+
+                          Prefix Verb     URI Pattern                                                                              Controller#Action
+                            root GET      /                                                                                        pages#home
+                new_user_session GET      /login(.:format)                                                                         devise/sessions#new
+                    user_session POST     /login(.:format)                                                                         devise/sessions#create
+            destroy_user_session DELETE   /logout(.:format)                                                                        devise/sessions#destroy
+user_facebook_omniauth_authorize GET|POST /auth/facebook(.:format)                                                                 omniauth_callbacks#passthru
+ user_facebook_omniauth_callback GET|POST /auth/facebook/callback(.:format)                                                        omniauth_callbacks#facebook
+               new_user_password GET      /password/new(.:format)                                                                  devise/passwords#new
+              edit_user_password GET      /password/edit(.:format)                                                                 devise/passwords#edit
+                   user_password PATCH    /password(.:format)                                                                      devise/passwords#update
+                                 PUT      /password(.:format)                                                                      devise/passwords#update
+                                 POST     /password(.:format)                                                                      devise/passwords#create
+        cancel_user_registration GET      /cancel(.:format)                                                                        registrations#cancel
+           new_user_registration GET      /sign_up(.:format)                                                                       registrations#new
+          edit_user_registration GET      /profile(.:format)                                                                       registrations#edit
+               user_registration PATCH    /                                                                                        registrations#update
+                                 PUT      /                                                                                        registrations#update
+                                 DELETE   /                                                                                        registrations#destroy
+                                 POST     /                                                                                        registrations#create
+           new_user_confirmation GET      /confirmation/new(.:format)                                                              devise/confirmations#new
+               user_confirmation GET      /confirmation(.:format)                                                                  devise/confirmations#show
+                                 POST     /confirmation(.:format)                                                                  devise/confirmations#create
+                            user GET      /users/:id(.:format)                                                                     users#show
+                           rooms GET      /rooms(.:format)                                                                         rooms#index
+                                 POST     /rooms(.:format)                                                                         rooms#create
+                        new_room GET      /rooms/new(.:format)                                                                     rooms#new
+                       edit_room GET      /rooms/:id/edit(.:format)                                                                rooms#edit
+                            room GET      /rooms/:id(.:format)                                                                     rooms#show
+                                 PATCH    /rooms/:id(.:format)                                                                     rooms#update
+                                 PUT      /rooms/:id(.:format)                                                                     rooms#update
+                                 DELETE   /rooms/:id(.:format)                                                                     rooms#destroy
+                          photos GET      /photos(.:format)                                                                        photos#index
+                                 POST     /photos(.:format)                                                                        photos#create
+                       new_photo GET      /photos/new(.:format)                                                                    photos#new
+                      edit_photo GET      /photos/:id/edit(.:format)                                                               photos#edit
+                           photo GET      /photos/:id(.:format)                                                                    photos#show
+                                 PATCH    /photos/:id(.:format)                                                                    photos#update
+                                 PUT      /photos/:id(.:format)                                                                    photos#update
+                                 DELETE   /photos/:id(.:format)                                                                    photos#destroy
+               room_reservations POST     /rooms/:room_id/reservations(.:format)                                                   reservations#create
+                                 GET      /rooms(.:format)                                                                         rooms#index
+                                 POST     /rooms(.:format)                                                                         rooms#create
+                                 GET      /rooms/new(.:format)                                                                     rooms#new
+                                 GET      /rooms/:id/edit(.:format)                                                                rooms#edit
+                                 GET      /rooms/:id(.:format)                                                                     rooms#show
+                                 PATCH    /rooms/:id(.:format)                                                                     rooms#update
+                                 PUT      /rooms/:id(.:format)                                                                     rooms#update
+                                 DELETE   /rooms/:id(.:format)                                                                     rooms#destroy
+              rails_service_blob GET      /rails/active_storage/blobs/:signed_id/*filename(.:format)                               active_storage/blobs#show
+       rails_blob_representation GET      /rails/active_storage/representations/:signed_blob_id/:variation_key/*filename(.:format) active_storage/representations#show
+              rails_disk_service GET      /rails/active_storage/disk/:encoded_key/*filename(.:format)                              active_storage/disk#show
+       update_rails_disk_service PUT      /rails/active_storage/disk/:encoded_token(.:format)                                      active_storage/disk#update
+            rails_direct_uploads POST     /rails/active_storage/direct_uploads(.:format)                                           active_storage/direct_uploads#create
