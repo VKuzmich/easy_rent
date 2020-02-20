@@ -26,6 +26,14 @@ class ReservationsController < ApplicationController
     redirect_to @reservation.room, notice: 'Your reservation has boon created!'
   end
 
+  def your_trips
+    @trips = current_user.reservations
+  end
+
+  def your_reservations
+    @rooms = current_user.rooms
+  end
+
   private
 
   def is_conflict(start_date, end_date)
@@ -34,7 +42,6 @@ class ReservationsController < ApplicationController
     check = room.reservations.where("? < start_date AND end_date < ?", start_date, end_date)
     check.size > 0? true : false
   end
-
 
 
   def reservations_params
