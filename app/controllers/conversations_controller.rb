@@ -2,7 +2,7 @@ class ConversationsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @user = User.all
+    @users = User.all
     @conversations = Conversation.involving(current_user)
   end
 
@@ -12,6 +12,7 @@ class ConversationsController < ApplicationController
     else
       @conversation = Conversation.create(conversation_params)
     end
+
     redirect_to conversation_messages_path(@conversation)
   end
 
