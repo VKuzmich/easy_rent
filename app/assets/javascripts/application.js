@@ -16,5 +16,5 @@
 //= require jquery-ui/widgets/datepicker
 //= require toastr
 //= require activestorage
-
+//= require private_pub
 //= require_tree .

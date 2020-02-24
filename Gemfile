@@ -37,13 +37,15 @@ gem 'bootstrap-sass', '~> 3.4.1'
 gem 'devise'
 gem 'geocoder'
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'paperclip'
+gem 'private_pub'
 gem 'sassc-rails', '>= 2.1.0'
-gem 'toastr-rails'
-gem 'jquery-ui-rails'
 gem 'simple_form'
+gem 'thin'
+gem 'toastr-rails'
 
 
 # Reduces boot times through caching; required in config/boot.rb
