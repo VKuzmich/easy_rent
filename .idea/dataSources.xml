@@ -13,5 +13,29 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/easy_rent_test</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="Rails easy_rent: development" uuid="44e33981-0a7a-450f-afa3-6b43f60f3c99">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/easy_rent_development</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails easy_rent: production" uuid="2af9b157-8dde-4c01-a0a3-bbb6f01bee71">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/easy_rent_production</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails easy_rent: test" uuid="3aee90d9-1d64-4041-a314-e7fdcff93342">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/easy_rent_test</jdbc-url>
+    </data-source>
   </component>
 </project>
