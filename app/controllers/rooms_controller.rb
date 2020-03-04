@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class RoomsController < ApplicationController
   before_action :set_room, only: [:show, :edit, :update]
   before_action :authenticate_user!, except: [:show]
@@ -24,10 +26,11 @@ class RoomsController < ApplicationController
 
     if @room.save
 
-      params[:images]&.each do |image|
+      if params[:images]
+        params[:images].each do |image|
           @room.photos.create(image: image)
         end
-
+      end
       @photos = @room.photos
       redirect_to edit_room_path(@room), notice: "Saved..."
     else
@@ -46,9 +49,11 @@ class RoomsController < ApplicationController
   def update
     if @room.update(room_params)
 
-      params[:images]&.each do |image|
+      if params[:images]
+        params[:images].each do |image|
           @room.photos.create(image: image)
         end
+      end
 
       redirect_to edit_room_path(@room), notice: "Updated..."
     else
@@ -57,6 +62,7 @@ class RoomsController < ApplicationController
   end
 
   private
+
   def set_room
     @room = Room.find(params[:id])
   end

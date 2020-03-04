@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Message < ActiveRecord::Base
   belongs_to :conversation
   belongs_to :user
@@ -7,5 +9,4 @@ class Message < ActiveRecord::Base
   def message_time
     created_at.strftime("%v")
   end
-
 end
