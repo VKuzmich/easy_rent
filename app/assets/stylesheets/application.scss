@@ -21,7 +21,6 @@ body {
   font-weight: 400;
 }
 
-
 .btn-primary.btn {
   border: 1px solid #ff5a5f;
   border-radius: 2px;
@@ -81,15 +80,15 @@ body {
 }
 
 .avatar-small {
-  width: 20px;
+  width: 28px;
 }
 
 .avatar-medium {
-  width: 40px;
+  width: 48px;
 }
 
 .avatar-large {
-  width: 60px;
+  width: 68px;
 }
 
 .avatar-full {
@@ -132,7 +131,6 @@ body {
   font-weight: bold;
   text-decoration: none;
 }
-
 
 label {
   color: #565a5c;
@@ -185,7 +183,6 @@ input[type="checkbox"]:checked:before {
   color: #ff5a5f;
 }
 
-
 .btn-file {
   position: relative;
   overflow: hidden;
@@ -224,13 +221,11 @@ input[type="checkbox"]:checked:before {
   text-decoration: line-through
 }
 
-
 .reservation-table td {
   width: 100%;
   border: 1px solid #dce0e0;
   padding: 10px;
 }
-
 
 .wide {
   width: 100%;
@@ -251,4 +246,43 @@ input[type="checkbox"]:checked:before {
 
 .conversation:hover, .conversation:focus {
   background-color: #F4F4F5;
+}
+
+#wrapper {
+  width:960px;
+  margin:0 auto;
+}
+
+#sidebar {
+  float:right;
+  width:340px;
+}
+
+#sidebar #widget {
+  width:340px;
+  height: 600px;
+  margin-bottom:10px;
+  border-bottom:1px solid #ccc;
+}
+
+#article {
+  width:560px;
+}
+
+.discovery-card {
+  background-size: cover;
+  background-position: center;
+  height: 326px;
+}
+
+.va-container {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.va-middle {
+  color: #fff;
+  vertical-align: middle;
+  display: table-cell;
 }
