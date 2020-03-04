@@ -57,8 +57,9 @@
         </div>
       </div>
 
+      <!-- Reservation form -->
       <div class="col-md-4">
-        <!-- Reservation form -->
+        <%= render 'reservations/form' %>
       </div>
     </div>
 
@@ -128,6 +129,24 @@
       </div>
     </div>
     <hr>
+
+    <!-- Reviews -->
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Reviews <span id="average_rating"></span> (<%= @reviews.count %>)</h3>
+        <div class="container">
+          <div>
+            <%= render 'reviews/form' if @booked && !@hasReview %>
+          </div>
+          <div>
+            <%= render 'reviews/list' %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
     <!-- Google map -->
     <div class="row">
       <div class="col-md-12">
@@ -139,24 +158,48 @@
 
           }
         </style>
-        <script async defer
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3uxTIrMJbo2Q5jcaShJkI-3BLz0PyUIE&callback=initMap">
-        </script>
 
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
         <script>
-            // Initialize and add the map
-            function initMap() {
-                // The location of Uluru
-                var uluru = {lat: <%= @room.latitude %>, lng: <%= @room.longitude %>};
-                // The map, centered at Uluru
-                var map = new google.maps.Map(
-                    document.getElementById('map'), {zoom: 4, center: uluru});
-                // The marker, positioned at Uluru
-                var marker = new google.maps.Marker({position: uluru, map: map, title: "EasyRent"});
-                marker.setMap(map);
+            function initialize() {
+                var mapCanvas = document.getElementById('map');
+                var mapOptions = {
+                    center: new google.maps.LatLng(<%= @room.latitude %>, <%= @room.longitude %>),
+                    zoom: 14,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                }
+                var map = new google.maps.Map(mapCanvas, mapOptions);
 
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(<%= @room.latitude %>, <%= @room.longitude %>),
+                    title: "EasyRent"
+                });
+
+                marker.setMap(map);
             }
+            google.maps.event.addDomListener(window, 'load', initialize);
         </script>
+
+
+
+<!--        <script async defer-->
+<!--                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3uxTIrMJbo2Q5jcaShJkI-3BLz0PyUIE&callback=initMap">-->
+<!--        </script>-->
+
+<!--        <script>-->
+<!--            // Initialize and add the map-->
+<!--            function initMap() {-->
+<!--                // The location of Uluru-->
+<!--                var uluru = {lat: <%= @room.latitude %>, lng: <%= @room.longitude %>};-->
+<!--                // The map, centered at Uluru-->
+<!--                var map = new google.maps.Map(-->
+<!--                    document.getElementById('map'), {zoom: 4, center: uluru});-->
+<!--                // The marker, positioned at Uluru-->
+<!--                var marker = new google.maps.Marker({position: uluru, map: map, title: "EasyRent"});-->
+<!--                marker.setMap(map);-->
+
+<!--            }-->
+<!--        </script>-->
 
 
       </div>
@@ -184,3 +227,11 @@
 
   </div>
 </div>
+
+<script>
+    $('#average_rating').raty({
+        path: '/assets',
+        readOnly: true,
+        score: <%= @room.average_rating %>
+    })
+</script>
